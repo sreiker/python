@@ -12,7 +12,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        bat 'dir'
+        bat 'python test1.py'
       }
     }
   }
