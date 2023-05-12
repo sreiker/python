@@ -12,7 +12,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        bat 'ls'
+        bat 'dir'
       }
     }
   }
