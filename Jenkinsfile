@@ -12,6 +12,7 @@ pipeline {
 
     stage('Test') {
       steps {
+        bat 'pip install selenium'
         bat 'python test1.py'
       }
     }
