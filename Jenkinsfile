@@ -4,7 +4,9 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/prashantsharma2608/second.git'
+        checkout([$class: 'GitSCM',
+                  branches: [[name: '*/main']],
+                  userRemoteConfigs: [[url: 'https://github.com/prashantsharma2608/second.git']]])
       }
     }
 
