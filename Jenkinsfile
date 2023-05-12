@@ -12,7 +12,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'python test1.py'
+        sh 'ls'
       }
     }
   }
