@@ -14,7 +14,7 @@ pipeline {
       steps {
         sh 'python -m pip install selenium'
         sh 'python -m pip install pytest'
-        sh 'python C:\Users\prashantsharma\PycharmProjects\selenium\second\test1.py'
+        sh 'python C://Users//prashantsharma//PycharmProjects//selenium//second//test1.py'
       }
     }
   }
