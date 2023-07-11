@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import pytest
 # nOt0r5Le5LhYZjrmZ6DpW4QvvXBXTCyG670NB1H02zr1ik9Zwh
-username = "prashantsharma"
-accessToken = "qvitkAIKuMTkUYduwzBszg7OGoCl729DEDQY7NcVf33MhG5rG3"
+username = "tabishiqbal"
+accessToken = "ofCp6IQuvCPeyhn6esWtASiLb8lUpOtLl9XbPyNRwk4uRYrSRy"
 gridUrl = "hub.lambdatest.com/wd/hub"
 
 options = ChromeOptions()
