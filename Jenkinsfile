@@ -10,6 +10,12 @@ pipeline {
       }
     }
 
+    stage('Enviournment'){
+      environment {
+     env.PATH = env.PATH + ";c:\\Windows\\System32"
+ }
+    }
+
     stage('Test') {
       steps {
         bat 'python -m pip install selenium'
