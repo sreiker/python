@@ -12,9 +12,9 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'python -m pip install selenium'
-        sh 'python -m pip install pytest'
-        sh 'python C://Users//prashantsharma//PycharmProjects//selenium//second//test1.py'
+        bat 'python -m pip install selenium'
+        bat 'python -m pip install pytest'
+        bat 'python C://Users//prashantsharma//PycharmProjects//selenium//second//test1.py'
       }
     }
   }
