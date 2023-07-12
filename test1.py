@@ -8,7 +8,7 @@ import pytest
 username = "prashantsharma"
 accessToken = "RlEUtZdSXJkl3iEtXNx6eWFSyLBfDJlkYRYG1igfb1OjpXfXRp"
 gridUrl = "hub.lambdatest.com/wd/hub"
-p = os.getenv(LT_BUILD_NAME)
+p = os.getenv("LT_BUILD_NAME")
 options = ChromeOptions()
 options.browser_version = "112.0"
 options.platform_name = "Windows 11"
