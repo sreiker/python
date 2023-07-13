@@ -12,8 +12,8 @@ pipeline {
 
     stage('Test') {
       steps {
-        bat 'python -m pip install selenium'
-        bat 'python -m pip install pytest'
+        bat 'pip install selenium'
+        bat 'pip install pytest'
         bat 'python C://Users//prashantsharma//PycharmProjects//selenium//second//test1.py'
       }
     }
