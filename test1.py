@@ -8,7 +8,7 @@ import pytest
 username = "prashantsharma"
 accessToken = "RlEUtZdSXJkl3iEtXNx6eWFSyLBfDJlkYRYG1igfb1OjpXfXRp"
 gridUrl = "hub.lambdatest.com/wd/hub"
-p = os.getenv("LT_BUILD_NAME")
+build = os.getenv("LT_BUILD_NAME")
 options = ChromeOptions()
 options.browser_version = "112.0"
 options.platform_name = "Windows 11"
@@ -17,7 +17,7 @@ lt_options["username"] = "prashantsharma"
 lt_options["accessKey"] = "nOt0r5Le5LhYZjrmZ6DpW4QvvXBXTCyG670NB1H02zr1ik9Zwh"
 lt_options["project"] = "selenium test"
 lt_options["name"] = "selenium"
-lt_options["build"] = p
+lt_options["build"] = build
 lt_options["network"] = True
 lt_options["networkThrottling"] = "Regular 3G"
 lt_options["w3c"] = True
