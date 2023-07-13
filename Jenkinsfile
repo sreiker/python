@@ -14,7 +14,7 @@ pipeline {
       steps {
         bat 'pip install selenium'
         bat 'pip install pytest'
-        bat 'python C://Users//prashantsharma//PycharmProjects//selenium//second//test1.py'
+        bat 'python test1.py'
       }
     }
   }
