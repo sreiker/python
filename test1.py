@@ -7,7 +7,7 @@ import pytest
 # nOt0r5Le5LhYZjrmZ6DpW4QvvXBXTCyG670NB1H02zr1ik9Zwh
 username = "prashantsharma"
 accessToken = "RlEUtZdSXJkl3iEtXNx6eWFSyLBfDJlkYRYG1igfb1OjpXfXRp"
-build = os.getenv("LT_BUILD_NAME")
+build = os.getenv('LT_BUILD_NAME')
 gridUrl = "hub.lambdatest.com/wd/hub"
 options = ChromeOptions()
 options.browser_version = "112.0"
