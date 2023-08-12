@@ -17,5 +17,10 @@ pipeline {
         bat 'python test1.py'
       }
     }
+    stage('Report'){
+      steps{
+        lambdaTestReportPublisher 'automation'
+      }
+    }
   }
 }
