@@ -22,8 +22,8 @@ lt_options["network"] = True
 lt_options["networkThrottling"] = "Regular 3G"
 lt_options["w3c"] = True
 lt_options["plugin"] = "python-python"
-lt_options["tunnel"] = True
-lt_options["tunnelName"] = "LT-LP-156"
+# lt_options["tunnel"] = True
+# lt_options["tunnelName"] = "LT-LP-156"
 options.set_capability('LT:Options', lt_options)
 
 # "http://hub.lambdatest.com/wd/hub"
