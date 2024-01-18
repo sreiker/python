@@ -31,6 +31,7 @@ driver = webdriver.Remote(
         command_executor=url,
         options=options
     )
+print(options)
 
 Username = "prashantsharma@lambdatest.com"
 pd = "aARUSH@123"
