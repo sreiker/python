@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import pytest
 # nOt0r5Le5LhYZjrmZ6DpW4QvvXBXTCyG670NB1H02zr1ik9Zwh
-username = "varunkumarb"
-accessToken = "GhGShOYHz1jODWE9qDvkJK4nPDR3n2lc0gNp9VknalhwtUineG"
+username = "prashantsharma"
+accessToken = "nNpUjSJvFWyN4n79TeHhVsAxrLDKJ0pJJ3GW7ApuSn7tMQmein"
 build = os.getenv('LT_BUILD_NAME')
 os.environ['LT_GRID_URL'] = 'https://prashantsharma:{AQAAABAAAABAvJUzCmhyN6piWVOFEIEF+Q7bPcDsSafuiRJN3pqDwq1ZY7IIJm6RlgnD3xpV1isd0njjE5sfVtr1PXpjVfpd9h6ZLAv+BKBZL8pClZlGv20=}@hub.lambdatest.com/wd/hub'
 gridUrl = "hub.lambdatest.com/wd/hub"
