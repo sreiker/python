@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Example') {
+    stage('Job name') {
             steps {
                 script {
                     // Store the Jenkins job name in a variable
