@@ -28,6 +28,7 @@ pipeline {
         bat 'python test1.py'
       }
     }
+  }
     post {
         always {
             // This block will be executed regardless of the build result
@@ -44,4 +45,3 @@ pipeline {
         }
     }
   }
-}
