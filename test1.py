@@ -7,7 +7,7 @@ import pytest
 # nOt0r5Le5LhYZjrmZ6DpW4QvvXBXTCyG670NB1H02zr1ik9Zwh
 username = "prashantsharma"
 accessToken = "nNpUjSJvFWyN4n79TeHhVsAxrLDKJ0pJJ3GW7ApuSn7tMQmein"
-build = os.getenv('LT_BUILD_NAME')
+build = os.environ.get('BUILD_NUMBER')
 os.environ['LT_GRID_URL'] = 'https://prashantsharma:{AQAAABAAAABAvJUzCmhyN6piWVOFEIEF+Q7bPcDsSafuiRJN3pqDwq1ZY7IIJm6RlgnD3xpV1isd0njjE5sfVtr1PXpjVfpd9h6ZLAv+BKBZL8pClZlGv20=}@hub.lambdatest.com/wd/hub'
 gridUrl = "hub.lambdatest.com/wd/hub"
 options = ChromeOptions()
