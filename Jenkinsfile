@@ -13,21 +13,19 @@ pipeline {
                 }
             }
         }
-     stage('builName'){
-       post {
-        always {
-            // This block will be executed regardless of the build result
+     stage('builName') {
+      steps {
+        // This block will be executed for all build results
+        script {
+          // Add the script to update LambdaTest build name here
+          LT_USERNAME = "username"
+          LT_ACCESS_KEY = "accesskey"
+          LT_BUILD_NAME = "Jenkins Build ${BUILD_NUMBER}"
+          LT_API_ENDPOINT = "https://api.lambdatest.com/api/v1/builds/${LT_USERNAME}"
 
-            script {
-                // Add the script to update LambdaTest build name here
-                LT_USERNAME = "prashantsharma"
-                LT_ACCESS_KEY = "nNpUjSJvFWyN4n79TeHhVsAxrLDKJ0pJJ3GW7ApuSn7tMQmein"
-                LT_BUILD_NAME = "Jenkins Build ${BUILD_NUMBER}"
-                LT_API_ENDPOINT = "https://api.lambdatest.com/api/v1/builds/${LT_USERNAME}"
-
-                bat "curl -X PUT -u ${LT_USERNAME}:${LT_ACCESS_KEY} -H 'Content-Type: application/json' -d '{\"build\": \"${LT_BUILD_NAME}\"}' ${LT_API_ENDPOINT}"
-            }
+          bat "curl -X PUT -u ${LT_USERNAME}:${LT_ACCESS_KEY} -H 'Content-Type: application/json' -d '{\"build\": \"${LT_BUILD_NAME}\"}' ${LT_API_ENDPOINT}"
         }
+      }
     }
     stage('Checkout') {
       steps {
