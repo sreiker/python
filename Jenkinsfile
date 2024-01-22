@@ -2,14 +2,14 @@ pipeline {
   agent any
 
   stages {
-    stage('Job name') {
+    stage('buildNumber') {
             steps {
                 script {
-                    // Store the Jenkins job name in a variable
-                    def myJobName = env.JOB_NAME
+                    // Store the Jenkins build number in a variable
+                    def myBuildNumber = env.BUILD_NUMBER
 
-                    // Now you can use 'myJobName' for further processing
-                    echo "Current Jenkins job name is: ${myJobName}"
+                    // Now you can use 'myBuildNumber' for further processing
+                    echo "Current build number is: ${myBuildNumber}"
                 }
             }
         }
