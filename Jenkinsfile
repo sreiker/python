@@ -2,6 +2,17 @@ pipeline {
   agent any
 
   stages {
+    stage('Example') {
+            steps {
+                script {
+                    // Store the Jenkins job name in a variable
+                    def myJobName = env.JOB_NAME
+
+                    // Now you can use 'myJobName' for further processing
+                    echo "Current Jenkins job name is: ${myJobName}"
+                }
+            }
+        }
     stage('Checkout') {
       steps {
         checkout([$class: 'GitSCM',
