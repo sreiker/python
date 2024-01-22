@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Report'){
       steps{
-        lambdaTestReportPublisher 'automation'
+        lambdaTestReportPublisher 'app-automation'
       }
     }
   }
