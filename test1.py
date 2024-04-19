@@ -44,11 +44,11 @@ current_time = datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S")
 # # parser.add_argument('--caps_json', type=str, default='capsV3.json', help='Path to the caps json file.')
 
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
-# convert comma-separated strings into lists
-args.build_tags = [tag.strip() for tag in args.build_tags.split(',')] if args.build_tags else []
-args.test_tags = [tag.strip() for tag in args.test_tags.split(',')] if args.test_tags else []
+# # convert comma-separated strings into lists
+# args.build_tags = [tag.strip() for tag in args.build_tags.split(',')] if args.build_tags else []
+# args.test_tags = [tag.strip() for tag in args.test_tags.split(',')] if args.test_tags else []
 
 class FirstSampleTest(unittest.TestCase):
 
