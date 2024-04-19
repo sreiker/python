@@ -25,6 +25,7 @@ pipeline {
       steps {
         bat 'python -m pip install selenium'
         bat 'python -m pip install pytest'
+        bat 'python -m pip install pytz'
         bat 'python test1.py'
       }
     }
