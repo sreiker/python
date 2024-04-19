@@ -32,8 +32,8 @@ parser.add_argument('--builds', type=int, default=1, help='The number of builds 
 parser.add_argument('--parallel', type=int, default=1, help='The maximum number of worker threads.')
 parser.add_argument('--test_name', type=str, default=f"v3_FTD_Test_{current_time}", help='The base name of the test.')
 parser.add_argument('--build_name', type=str, default=f"v3_FTD_Build_aut_{current_time}", help='The base name of the build.')
-parser.add_argument('--prashantsharma', type=str, required=True, help='The username to use for the selenium tests.')
-parser.add_argument('--3UNsy6oWzNZw0CsFtY1eyFxtDZhCF5CyQRbZFjJa6jAXi8Wv0I', type=str, required=True, help='The access key to use for the selenium tests.')
+parser.add_argument('--username', type=str, required=True, help='The username to use for the selenium tests.')
+parser.add_argument('--access_key', type=str, required=True, help='The access key to use for the selenium tests.')
 parser.add_argument('--env', type=str, default="stage", choices=["stage", "prod"], help='The environment to run the tests in. Default is stage.')
 parser.add_argument('--hub_url', type=str, default="hub-virginia", help='The hub url to use for the selenium tests.')
 parser.add_argument('--command_count', type=int, default=0, help='To increase command count in the test by factor of 8')
@@ -228,7 +228,7 @@ class FirstSampleTest(unittest.TestCase):
             options.set_capability('LT:Options', lt_options)
 
             driver = webdriver.Remote(
-                command_executor=f"http://{"prashantsharma"}:{"3UNsy6oWzNZw0CsFtY1eyFxtDZhCF5CyQRbZFjJa6jAXi8Wv0I"}@{base_url}/wd/hub",
+                command_executor=f"http://{args.username}:{args.access_key}@{base_url}/wd/hub",
                 options=options)
 
             driver.set_page_load_timeout(30)
