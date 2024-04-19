@@ -404,8 +404,8 @@ class FirstSampleTest(unittest.TestCase):
 
 
     def test_demo_site(self):
-        build_count =  args.builds  # Change this to the number of builds you want to run
-        parallel_count = args.parallel  # Increase this value to increase the number of worker threads
+        # build_count =  args.builds  # Change this to the number of builds you want to run
+        # parallel_count = args.parallel  # Increase this value to increase the number of worker threads
         executor = ThreadPoolExecutor(max_workers=parallel_count)
         executor.map(self._test_single_build, range(1, build_count + 1))
         executor.shutdown(wait=True)
