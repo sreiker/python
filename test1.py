@@ -27,28 +27,28 @@ ist = pytz.timezone('Asia/Kolkata')
 current_time = datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S")
 
 # Parse command line arguments
-# parser = argparse.ArgumentParser(description='Run selenium tests.')
-# parser.add_argument('--builds', type=int, default=1, help='The number of builds to run.')
-# parser.add_argument('--parallel', type=int, default=1, help='The maximum number of worker threads.')
-# parser.add_argument('--test_name', type=str, default=f"v3_FTD_Test_{current_time}", help='The base name of the test.')
-# parser.add_argument('--build_name', type=str, default=f"v3_FTD_Build_aut_{current_time}", help='The base name of the build.')
-# parser.add_argument('--prashantsharma', type=str, required=True, help='The username to use for the selenium tests.')
-# parser.add_argument('--3UNsy6oWzNZw0CsFtY1eyFxtDZhCF5CyQRbZFjJa6jAXi8Wv0I', type=str, required=True, help='The access key to use for the selenium tests.')
-# parser.add_argument('--env', type=str, default="stage", choices=["stage", "prod"], help='The environment to run the tests in. Default is stage.')
-# parser.add_argument('--hub_url', type=str, default="hub-virginia", help='The hub url to use for the selenium tests.')
-# parser.add_argument('--command_count', type=int, default=0, help='To increase command count in the test by factor of 8')
-# parser.add_argument('--error_commands', type=int, default=0, help='To include error commands in the test, maximum value that can be passed is 15')
-# parser.add_argument('--error_repeat', type=int, default=1, help='To run the chosen error n number of times')
-# parser.add_argument('--build_tags', type=str, default="", help='Build tags to include in the test. Comma separated.')
-# parser.add_argument('--test_tags', type=str, default="", help='Test tags to include in the test. Comma separated.')
-# # parser.add_argument('--caps_json', type=str, default='capsV3.json', help='Path to the caps json file.')
+parser = argparse.ArgumentParser(description='Run selenium tests.')
+parser.add_argument('--builds', type=int, default=1, help='The number of builds to run.')
+parser.add_argument('--parallel', type=int, default=1, help='The maximum number of worker threads.')
+parser.add_argument('--test_name', type=str, default=f"v3_FTD_Test_{current_time}", help='The base name of the test.')
+parser.add_argument('--build_name', type=str, default=f"v3_FTD_Build_aut_{current_time}", help='The base name of the build.')
+parser.add_argument('--prashantsharma', type=str, required=True, help='The username to use for the selenium tests.')
+parser.add_argument('--3UNsy6oWzNZw0CsFtY1eyFxtDZhCF5CyQRbZFjJa6jAXi8Wv0I', type=str, required=True, help='The access key to use for the selenium tests.')
+parser.add_argument('--env', type=str, default="stage", choices=["stage", "prod"], help='The environment to run the tests in. Default is stage.')
+parser.add_argument('--hub_url', type=str, default="hub-virginia", help='The hub url to use for the selenium tests.')
+parser.add_argument('--command_count', type=int, default=0, help='To increase command count in the test by factor of 8')
+parser.add_argument('--error_commands', type=int, default=0, help='To include error commands in the test, maximum value that can be passed is 15')
+parser.add_argument('--error_repeat', type=int, default=1, help='To run the chosen error n number of times')
+parser.add_argument('--build_tags', type=str, default="", help='Build tags to include in the test. Comma separated.')
+parser.add_argument('--test_tags', type=str, default="", help='Test tags to include in the test. Comma separated.')
+# parser.add_argument('--caps_json', type=str, default='capsV3.json', help='Path to the caps json file.')
 
 
-# args = parser.parse_args()
+args = parser.parse_args()
 
-# # convert comma-separated strings into lists
-# args.build_tags = [tag.strip() for tag in args.build_tags.split(',')] if args.build_tags else []
-# args.test_tags = [tag.strip() for tag in args.test_tags.split(',')] if args.test_tags else []
+# convert comma-separated strings into lists
+args.build_tags = [tag.strip() for tag in args.build_tags.split(',')] if args.build_tags else []
+args.test_tags = [tag.strip() for tag in args.test_tags.split(',')] if args.test_tags else []
 
 class FirstSampleTest(unittest.TestCase):
 
@@ -404,8 +404,8 @@ class FirstSampleTest(unittest.TestCase):
 
 
     def test_demo_site(self):
-        # build_count =  args.builds  # Change this to the number of builds you want to run
-        # parallel_count = args.parallel  # Increase this value to increase the number of worker threads
+        build_count =  args.builds  # Change this to the number of builds you want to run
+        parallel_count = args.parallel  # Increase this value to increase the number of worker threads
         executor = ThreadPoolExecutor(max_workers=parallel_count)
         executor.map(self._test_single_build, range(1, build_count + 1))
         executor.shutdown(wait=True)
