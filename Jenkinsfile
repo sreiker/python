@@ -26,7 +26,7 @@ pipeline {
         bat 'python -m pip install selenium'
         bat 'python -m pip install pytest'
         bat 'python -m pip install pytz'
-        bat 'python test1.py'
+        bat 'python /Users/sakshamagarwal/Downloads/v3withCaps.py --builds 3 --parallel 3 --error_commands 3 --username lambdatestdemo --access_key 0H7V3MMGoZeafPIJTySEvJR5V4hKuWsJXtGOJ2cuT96YLt7jhu --env prod --test_name "Sample Flaky Test" --build_name "Sample Flaky Build 2"'
       }
     }
   }
