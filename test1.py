@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
+LT_BUILD_NAME = env.BUILD_NUMBER
 
 
 # paste your capibility options below
@@ -19,7 +20,7 @@ lt_options["accessKey"] = access_key
 lt_options["video"] = True
 lt_options["resolution"] = "1920x1080"
 lt_options["network"] = True
-lt_options["build"] = "test_build"
+lt_options["build"] = LT_BUILD_NAME
 lt_options["project"] = "unit_testing"
 lt_options["smartUI.project"] = "test"
 lt_options["name"] = "basic_unit_selinium"
