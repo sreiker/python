@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
-LT_BUILD_NAME = os.BUILD_NUMBER
+LT_BUILD_NAME = os.getenv(BUILD_NUMBER)
 
 
 # paste your capibility options below
