@@ -41,7 +41,7 @@ class FirstSampleTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Remote(
-            command_executor="http://prashant.lambdatest:bfb8wp2QQOOPRMs43erHjSeZQT19YIIJzbMkspdDu5SrnARvee@hub.lambdatest.com/wd/hub".format(
+            command_executor="http://username:accesskey@hub.lambdatest.com/wd/hub".format(
                 username, access_key
             ),
             options=options,
