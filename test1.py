@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
-LT_BUILD_NAME = os.getenv(BUILD_NUMBER)
+# LT_BUILD_NAME = os.getenv(BUILD_NUMBER)
 
 
 # paste your capibility options below
@@ -15,12 +15,12 @@ options = ChromeOptions()
 options.browser_version = "latest"
 options.platform_name = "win10"
 lt_options = {}
-lt_options["username"] = username
-lt_options["accessKey"] = access_key
+lt_options["username"] = "sunilr"
+lt_options["accessKey"] = "LT_DrGAtmhkjPAWPN4NmN0DM4j3CUBWXj8mfGPXADh3iYd175P"
 lt_options["video"] = True
 lt_options["resolution"] = "1920x1080"
 lt_options["network"] = True
-lt_options["build"] = LT_BUILD_NAME
+lt_options["build"] = "BUILD"
 lt_options["project"] = "unit_testing"
 lt_options["smartUI.project"] = "test"
 lt_options["name"] = "basic_unit_selinium"
