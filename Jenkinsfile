@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Store the Jenkins build number in a variable
-                    def myBuildNumber = env.BUILD_NUMBER
+                    def myBuildNumber = "BUILD_NAME"
 
                     // Now you can use 'myBuildNumber' for further processing
                     echo "Current build number is: ${myBuildNumber}"
